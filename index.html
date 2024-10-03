@@ -3,21 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notícias Recentes</title>
+    <title>Relatório de Qualidade do Ar</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js" charset="utf-8"></script>
 </head>
 <body>
     <header>
-        <h1>Últimas Notícias</h1>
+        <div class="logo">
+            <h1>Qualidade do Ar</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Dados de Qualidade</a></li>
+                <li><a href="#">Relatórios</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main>
-        <section id="noticias-container" class="noticias-container">
-            <!-- Notícias serão carregadas aqui -->
+        <section class="intro">
+            <h2>Relatório de Qualidade do Ar</h2>
+            <p>Explore os dados sobre a qualidade do ar e como eles impactam nossa saúde.</p>
+        </section>
+
+        <section id="graficos-container" class="graficos-container">
+            <!-- Gráficos serão inseridos aqui -->
         </section>
     </main>
+
     <footer>
-        <p>Desenvolvido por juliana</p>
+        <p>Desenvolvimento feito por Juliana</p>
     </footer>
-    <script src="noticias.js"></script>
+
+    <script type="module" src="script.js"></script>
 </body>
-  </html>
+</html>
