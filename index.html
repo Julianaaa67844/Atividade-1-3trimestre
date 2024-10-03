@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relatório de Qualidade do Ar</title>
+    <title>Relatório Climático Global</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.plot.ly/plotly-latest.min.js" charset="utf-8"></script>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>
 </head>
 <body>
     <header>
         <div class="logo">
-            <h1>Qualidade do Ar</h1>
+            <h1>ClimaGlobal</h1>
         </div>
         <nav>
             <ul>
                 <li><a href="#">Início</a></li>
-                <li><a href="#">Dados de Qualidade</a></li>
+                <li><a href="#">Previsão Climática</a></li>
                 <li><a href="#">Relatórios</a></li>
                 <li><a href="#">Contato</a></li>
             </ul>
@@ -24,8 +24,8 @@
 
     <main>
         <section class="intro">
-            <h2>Relatório de Qualidade do Ar</h2>
-            <p>Explore os dados sobre a qualidade do ar e como eles impactam nossa saúde.</p>
+            <h2>Relatório Climático Global</h2>
+            <p>Explore as tendências globais de clima e como elas impactam nosso planeta.</p>
         </section>
 
         <section id="graficos-container" class="graficos-container">
@@ -34,9 +34,11 @@
     </main>
 
     <footer>
-        <p>Desenvolvimento feito por Juliana</p>
+        <p>Desenvolvido por juliana</p>
     </footer>
 
-    <script type="module" src="script.js"></script>
+    <script type="module" src="scripts/common.js"></script>
+    <script type="module" src="scripts/informacoesClimaticas.js"></script>
+    <script type="module" src="scripts/graficoTemperatura.js"></script>
 </body>
 </html>
