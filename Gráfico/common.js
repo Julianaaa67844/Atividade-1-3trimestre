@@ -5,13 +5,13 @@ const getCSS = (variavel) => {
 };
 
 const tickConfig = {
-    family: getCSS('--font'),
+    family: getCSS('--font') || 'Arial, sans-serif',
     size: 16,
-    color: getCSS('--primary-color')
+    color: getCSS('--primary-color') || '#000'
 };
 
 // Parte 2: Visualizar Informações de Qualidade do Ar
-const url = 'https://api.waqi.info/feed/geo:40.712776; -74.005974/?token=YOUR_API_TOKEN'; // Substitua YOUR_API_TOKEN pelo seu token de API
+const url = 'https://api.waqi.info/feed/geo:40.712776;-74.005974/?token=YOUR_API_TOKEN'; // Substitua YOUR_API_TOKEN pelo seu token de API
 
 async function visualizarInformacoesQualidadeAr() {
     const res = await fetch(url);
@@ -24,7 +24,7 @@ async function visualizarInformacoesQualidadeAr() {
 
     const qualidadeAr = dados.data.aqi; // AQI - Índice de Qualidade do Ar
     const poluicaoPrincipal = dados.data.dominentpol;
-    
+
     const paragrafo = document.createElement('p');
     paragrafo.classList.add('graficos-container__texto');
     paragrafo.innerHTML = `A qualidade do ar atual é de <span>${qualidadeAr}</span>, com poluição principal sendo <span>${poluicaoPrincipal}</span>.`;
@@ -41,7 +41,7 @@ async function exibirGraficoQualidadeAr() {
         mode: 'lines+markers',
         type: 'scatter',
         line: {
-            color: getCSS('--secondary-color'),
+            color: '#4CAF50',
             width: 3
         }
     };
@@ -50,8 +50,8 @@ async function exibirGraficoQualidadeAr() {
         title: 'Variação do Índice de Qualidade do Ar Mensal',
         xaxis: { title: 'Mês', tickfont: tickConfig },
         yaxis: { title: 'Índice de Qualidade do Ar (AQI)', tickfont: tickConfig },
-        paper_bgcolor: getCSS('--bg-color'),
-        plot_bgcolor: getCSS('--bg-color')
+        paper_bgcolor: '#f4f4f4',
+        plot_bgcolor: '#f4f4f4'
     };
 
     const data = [trace1];
@@ -61,4 +61,3 @@ async function exibirGraficoQualidadeAr() {
 // Chamadas para exibir os dados e o gráfico
 visualizarInformacoesQualidadeAr();
 exibirGraficoQualidadeAr();
-
