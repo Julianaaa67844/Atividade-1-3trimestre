@@ -3,42 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relatório Climático Global</title>
+    <title>Relatório de Clima nas Cidades</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <h1>ClimaGlobal</h1>
-        </div>
+        <h1>Relatório de Temperatura e Umidade nas Cidades</h1>
         <nav>
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Previsão Climática</a></li>
-                <li><a href="#">Relatórios</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
+            <a href="index.html">Cidades</a>
+            <a href="#">Outras Informações</a>
         </nav>
     </header>
-
-    <main>
-        <section class="intro">
-            <h2>Relatório Climático Global</h2>
-            <p>Explore as tendências globais de clima e como elas impactam nosso planeta.</p>
-        </section>
-
+    <main class="graficos-section">
         <section id="graficos-container" class="graficos-container">
-            <!-- Gráficos serão inseridos aqui -->
+            <!-- Gráficos e informações serão inseridos aqui -->
         </section>
     </main>
-
     <footer>
-        <p>Desenvolvido por juliana</p>
+        <p>Desenvolvido por Juliana</p>
     </footer>
-
-    <script type="module" src="scripts/common.js"></script>
-    <script type="module" src="scripts/informacoesClimaticas.js"></script>
-    <script type="module" src="scripts/graficoTemperatura.js"></script>
+    <script type="module" src="graficos/common.js"></script>
+    <script type="module" src="graficos/informacoesGlobais.js"></script>
+    <script type="module" src="graficos/quantidadeUsuarios.js"></script>
 </body>
 </html>
