@@ -1,95 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
-
-:root {
-    --primary-color: #2e8b57; /* Cor verde principal */
-    --secondary-color: #ffffff; /* Cor branca */
-    --accent-color: #ffcc00; /* Cor de destaque (amarelo claro) */
-    --bg-color: #f0f4f3; /* Fundo suave */
-    --font-family: 'Poppins', sans-serif;
-}
-
 body {
-    margin: 0;
-    font-family: var(--font-family);
+    font-family: Arial, sans-serif;
     background-color: var(--bg-color);
-    color: var(--primary-color);
-}
-
-header {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-}
-
-.logo h1 {
+    color: var(--text-color);
     margin: 0;
-    font-size: 1.8rem;
-    font-weight: 600;
+    padding: 20px;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-}
-
-nav ul li {
-    font-size: 1.2rem;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: var(--secondary-color);
-    font-weight: 400;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: var(--accent-color);
-}
-
-main {
-    padding: 2rem;
-    padding-bottom: 8rem; /* Adicionado para evitar sobreposição com o footer */
-}
-
-.intro {
+h1 {
+    color: var(--primary-color);
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 30px;
 }
 
-.intro h2 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    color: var(--primary-color);
-}
-
-.intro p {
-    font-size: 1.2rem;
-    color: var(--primary-color);
-}
-
-.graficos-container {
+#graficos-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 5rem; /* Margem inferior para o container de gráficos */
 }
 
-footer {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    text-align: center;
-    padding: 1rem 0;
-    position: relative; /* Alterado para manter o footer no fluxo do documento */
-    bottom: 0;
-    width: 100%;
+.grafico {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: var(--bg-color);
+    padding: 20px;
 }
 
-footer p {
-    margin: 0;
+.bar {
+    transition: all 0.3s ease;
+}
+
+.bar:hover {
+    opacity: 0.7;
+}
+
+.scatter {
+    transition: all 0.3s ease;
+}
+
+.scatter:hover {
+    marker-size: 10px; /* Aumenta o tamanho do marcador ao passar o mouse */
+}
+
+/* Cores das variáveis */
+:root {
+    --bg-color: #f0f0f0; /* Cor de fundo */
+    --primary-color: #007bff; /* Cor primária */
+    --secondary-color: #28a745; /* Cor secundária */
+    --text-color: #333; /* Cor do texto */
+    --font: 'Arial', sans-serif; /* Fonte padrão */
 }
